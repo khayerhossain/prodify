@@ -26,9 +26,11 @@ export async function POST(req: Request) {
             name: username,
             email,
             password: hashedPassword,
+            image: "https://i.ibb.co/default-profile.png", // default image
             createdAt: new Date(),
             provider: "credentials",
         });
+
 
         return NextResponse.json({ message: "User registered successfully", userId: result.insertedId }, { status: 201 });
     } catch (error: any) {
