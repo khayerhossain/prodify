@@ -5,11 +5,15 @@ import { ObjectId } from "mongodb";
 export async function GET(req: NextRequest, { params }: { params: { id: string } }) {
     try {
         const client = await clientPromise;
-        const db = client.db("your_db_name");
+        const db = client.db("ProdifyDB");
+
+        const { id: productId } = await params;
 
         const product = await db
             .collection("products")
-            .findOne({ _id: new ObjectId(params.id) }); // <-- must use ObjectId
+            .findOne({ _id: new ObjectId(productId) }); // <-- must use ObjectId
+
+        console.log("Fetched product:", product);
 
         if (!product) return NextResponse.json({ message: "Product not found" }, { status: 404 });
 
