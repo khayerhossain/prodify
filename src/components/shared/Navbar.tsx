@@ -23,7 +23,6 @@ const Navbar = () => {
   const links = [
     { name: "Home", href: "/" },
     { name: "Products", href: "/products" },
-    // { name: "Support", href: "/support" },
     { name: "Dashboard", href: "/dashboard" },
   ];
 

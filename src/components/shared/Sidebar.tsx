@@ -1,44 +1,35 @@
 import Link from "next/link";
-import { FaUser, FaCog, FaHome } from "react-icons/fa";
+import { FaHome, FaPlusCircle, FaUser } from "react-icons/fa";
 
 const Sidebar = () => {
   return (
-    <div className="bg-slate-100 min-h-screen p-4 rounded-xl">
+    <div className="min-h-screen p-4 rounded-xl bg-gray-900 text-white">
       <ul className="space-y-4">
         <li>
           <Link
-            href="/dashboard"
-            className="flex items-center space-x-2 p-3 rounded-md hover:bg-gray-200 text-gray-700"
-          >
-            <FaHome className="h-5 w-5" />
-            <span>Dashboard</span>
-          </Link>
-        </li>
-        <li>
-          <Link
             href="/"
-            className="flex items-center space-x-2 p-3 rounded-md hover:bg-gray-200 text-gray-700"
+            className="flex items-center space-x-2 p-3 rounded-md hover:bg-gray-700"
           >
             <FaHome className="h-5 w-5" />
-            <span>Back Home</span>
+            <span>Home</span>
           </Link>
         </li>
         <li>
           <Link
-            href="/dashboard/user-info"
-            className="flex items-center space-x-2 p-3 rounded-md hover:bg-gray-200 text-gray-700"
+            href="/dashboard/addproduct"
+            className="flex items-center space-x-2 p-3 rounded-md hover:bg-gray-700"
+          >
+            <FaPlusCircle className="h-5 w-5" />
+            <span>Add Product</span>
+          </Link>
+        </li>
+        <li>
+          <Link
+            href="/dashboard/profile"
+            className="flex items-center space-x-2 p-3 rounded-md hover:bg-gray-700"
           >
             <FaUser className="h-5 w-5" />
-            <span>User Info</span>
-          </Link>
-        </li>
-        <li>
-          <Link
-            href="/dashboard/settings"
-            className="flex items-center space-x-2 p-3 rounded-md hover:bg-gray-200 text-gray-700"
-          >
-            <FaCog className="h-5 w-5" />
-            <span>Settings</span>
+            <span>Profile</span>
           </Link>
         </li>
       </ul>
