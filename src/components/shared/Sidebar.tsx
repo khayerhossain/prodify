@@ -23,15 +23,6 @@ const Sidebar = () => {
             <span>Add Product</span>
           </Link>
         </li>
-        <li>
-          <Link
-            href="/dashboard/profile"
-            className="flex items-center space-x-2 p-3 rounded-md hover:bg-gray-700"
-          >
-            <FaUser className="h-5 w-5" />
-            <span>Profile</span>
-          </Link>
-        </li>
       </ul>
     </div>
   );

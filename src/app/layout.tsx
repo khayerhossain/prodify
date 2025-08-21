@@ -16,7 +16,7 @@ export default function RootLayout({
     <html lang="en" >
       <body>
         <Providers>
-          <div className="min-h-screen w-[90%] mx-auto">{children}</div>
+          <div className="min-h-screen mx-auto">{children}</div>
         </Providers>
       </body>
     </html>
