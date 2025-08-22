@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FaHome, FaPlusCircle, FaUser } from "react-icons/fa";
+import { FaHome, FaPlusCircle } from "react-icons/fa";
 
 const Sidebar = () => {
   return (
