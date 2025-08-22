@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import axios from "axios";
+import Image from "next/image";
 
 type Product = {
   _id: string;
@@ -49,7 +50,9 @@ const FeaturedSection = () => {
               key={product._id}
               className="bg-gray-800 shadow-lg rounded-2xl overflow-hidden border border-gray-700 hover:scale-105 transform transition"
             >
-              <img
+              <Image
+                width={400}
+                height={300}
                 src={product.image.trim()} // extra space remove fix
                 alt={product.name}
                 className="w-full h-48 object-cover"
